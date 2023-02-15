@@ -1,0 +1,23 @@
+{
+  "name": "newsletter-signup",
+  "version": "1.0.0",
+  "description": "my news letter app",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "abdurrahman idris",
+  "license": "ISC",
+  "engines": {
+    "node": "16.x"
+  },
+  "dependencies": {
+    "body-parser": "^1.20.1",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "express-validator": "^6.14.3",
+    "mongoose": "^6.9.1",
+    "serve-favicon": "^2.5.0"
+  }
+}
