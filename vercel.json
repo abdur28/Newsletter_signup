@@ -1,6 +1,6 @@
 {
    "version": 2,
-   "name": "music-album",
+   "name": "dollar_to_rub",
    "builds": [
       { "src": "app.js", "use": "@vercel/node" }
    ],
