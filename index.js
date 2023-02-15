@@ -25,7 +25,7 @@ const studentdata = new Studentdata ({
   email: "abdurrahmanidris28@gmail.com"
 })
 
-// studentdata.save()
+studentdata.save()
 
 app.get("/", function(req, res){
   res.sendFile(__dirname + "/signup.html")
