@@ -1,10 +1,10 @@
 {
-  "name": "newsletter-signup",
+  "name": "dollar_to_rub",
   "version": "1.0.0",
   "description": "my news letter app",
-  "main": "app.js",
+  "main": "index.js",
   "scripts": {
-    "start": "node app.js",
+    "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "[my-framework] build --output public"
   },
