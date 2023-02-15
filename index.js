@@ -25,7 +25,7 @@ const studentdata = new Studentdata ({
   email: "abdurrahmanidris28@gmail.com"
 })
 
-studentdata.save()
+// studentdata.save()
 
 app.get("/", function(req, res){
   res.sendFile(__dirname + "/signup.html")
@@ -49,7 +49,7 @@ app.post("/", function(req, res){
           lname: lastName,
           email: my_email
         })
-        // studentdata.save()
+        studentdata.save()
         res.sendFile(__dirname + "/success.html")
       }
     }
