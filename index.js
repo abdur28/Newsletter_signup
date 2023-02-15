@@ -9,7 +9,7 @@ const app = express();
 app.use(express.static("public"));
 app.use(bodyParser.urlencoded({extented:true}));
 
-mongoose.connect("mongodb+srv://admin-abdurrahman:abdurrahman@cluster0.s8jenvi.mongodb.net/anissirDB", { useNewUrlParser: true });
+mongoose.connect(process.env.mongoURL, { useNewUrlParser: true });
 
 const studentdataSchema = new mongoose.Schema ({
   fname: String,
