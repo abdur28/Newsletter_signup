@@ -9,7 +9,16 @@ const app = express();
 app.use(express.static("public"));
 app.use(bodyParser.urlencoded({extented:true}));
 
-mongoose.connect(process.env.mongoURL, { useNewUrlParser: true });
+mongoose.set("strictQuery", false);
+const connectDB = async () => {
+  try {
+    const conn = await mongoose.connect(process.env.mongoURL);
+    console.log(`MongoDB Connected: ${conn.connection.host}`);
+  } catch (error) {
+    console.log(error);
+    process.exit(1);
+  }
+}
 
 const studentdataSchema = new mongoose.Schema ({
   fname: String,
@@ -54,12 +63,11 @@ app.post("/", function(req, res){
       }
     }
   })
-
-
-
-
 })
 
-app.listen(process.env.PORT || 3000, function(){
-  console.log("Server running at port 3000")
+//Connect to the database before listening
+connectDB().then(() => {
+    app.listen(process.env.PORT || 3000, () => {
+        console.log("listening for requests");
+    })
 })
